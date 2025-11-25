@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styles from './Footer.module.css';
 
 function Footer() {
@@ -10,8 +11,11 @@ function Footer() {
           {/* Company Section */}
           <div className={styles.footerColumn}>
             <div className={styles.brandSection}>
-              <div className={styles.footerLogo}>Entolic Systems</div>
-              <p className={styles.tagline}>Infinite Innovation</p>
+              <img
+                src="/src/assets/scroll/Full_Logo__1_-removebg-preview.png"
+                alt="Entolic Systems - Infinite Innovation"
+                className={styles.footerLogoImage}
+              />
             </div>
             <p className={styles.companyDescription}>
               A leading technology consultancy delivering innovative solutions in software development,
@@ -77,10 +81,7 @@ function Footer() {
                   <circle cx="12" cy="10" r="3"/>
                 </svg>
                 <div className={styles.contactText}>
-                  <p>Office No. 313, City Center Building,</p>
-                  <p>Rajiv Gandhi Infotech Park,</p>
-                  <p>Hinjewadi Phase 1, Pune, MH,</p>
-                  <p>India - 411057</p>
+                  <p>Office No. 313, City Center Building, Rajiv Gandhi Infotech Park, Hinjewadi Phase 1, Pune, MH, India - 411057</p>
                 </div>
               </div>
 
@@ -129,11 +130,11 @@ function Footer() {
             &copy; {currentYear} Entolic Systems. All rights reserved.
           </p>
           <div className={styles.legalLinks}>
-            <a href="#" className={styles.legalLink}>Privacy Policy</a>
+            <Link to="/privacy-policy" className={styles.legalLink}>Privacy Policy</Link>
             <span className={styles.separator}>|</span>
-            <a href="#" className={styles.legalLink}>Terms of Service</a>
+            <Link to="/terms" className={styles.legalLink}>Terms &amp; Conditions</Link>
             <span className={styles.separator}>|</span>
-            <a href="#" className={styles.legalLink}>Cookie Policy</a>
+            <Link to="/cookie-policy" className={styles.legalLink}>Cookie Policy</Link>
           </div>
         </div>
       </div>

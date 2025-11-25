@@ -1,5 +1,6 @@
+import { Link } from 'react-router-dom';
 import styles from './Hero.module.css';
-import { CheckCircle2, Shield } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 function Hero() {
   return (
@@ -9,12 +10,16 @@ function Hero() {
         <div className={styles.gridPattern}></div>
         <div className={styles.particles}>
           {[...Array(20)].map((_, i) => (
-            <div key={i} className={styles.particle} style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`,
-              animationDuration: `${5 + Math.random() * 10}s`
-            }}></div>
+            <div
+              key={i}
+              className={styles.particle}
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 5}s`,
+                animationDuration: `${5 + Math.random() * 10}s`,
+              }}
+            ></div>
           ))}
         </div>
         <div className={styles.circuitLines}>
@@ -39,63 +44,37 @@ function Hero() {
       <div className={styles.container}>
         <div className={styles.heroInner}>
           <div className={styles.content}>
+            <p className={styles.eyebrow}>Entolic Systems · Infinite Innovation</p>
             <h1 className={styles.title}>
-              Innovating The Infinite.
+              Turning Your Vision into
+              <br />
+              Digital Reality
             </h1>
             <p className={styles.subtitle}>
-              Entolic Systems partners with startups and enterprises to design, build, and scale digital products that actually ship.
+              We design and build custom software solutions that evolve with your
+              business. From concept and architecture to deployment and
+              maintenance, we ensure secure, scalable, and high-performance
+              applications across web, mobile, and enterprise environments.
             </p>
             <div className={styles.ctaContainer}>
-              <button className={styles.btnPrimary}>
-                Book a Consultation
-              </button>
-              <button className={styles.btnSecondary}>
-                View Services
-              </button>
-            </div>
-            <div className={styles.socialProof}>
-              <CheckCircle2 className={styles.socialProofIcon} />
-              <span>Trusted by teams across fintech, SaaS, and e-commerce</span>
+              <Link to="/contact#contact" className={styles.btnPrimary}>
+                Start a project discussion
+                <ArrowRight className={styles.btnIcon} />
+              </Link>
+              <Link to="/about" className={styles.btnSecondary}>
+                Download company profile
+              </Link>
             </div>
           </div>
 
           <div className={styles.heroVisual}>
-            <div className={styles.visualCard}>
-              <div className={styles.statsGrid}>
-                <div className={styles.statItem}>
-                  <div className={styles.statValue}>50+</div>
-                  <div className={styles.statLabel}>Projects Delivered</div>
-                </div>
-                <div className={styles.statItem}>
-                  <div className={styles.statValue}>98%</div>
-                  <div className={styles.statLabel}>Client Satisfaction</div>
-                </div>
-                <div className={styles.statItem}>
-                  <div className={styles.statValue}>24/7</div>
-                  <div className={styles.statLabel}>Support Available</div>
-                </div>
-                <div className={styles.statItem}>
-                  <div className={styles.statValue}>5+</div>
-                  <div className={styles.statLabel}>Years Experience</div>
-                </div>
-              </div>
-            </div>
-
-            <div className={styles.visualCard}>
-              <ul className={styles.featuresList}>
-                <li className={styles.featureItem}>
-                  <Shield className={styles.featureIcon} />
-                  <span>Cloud-native architecture</span>
-                </li>
-                <li className={styles.featureItem}>
-                  <Shield className={styles.featureIcon} />
-                  <span>Enterprise-grade security</span>
-                </li>
-                <li className={styles.featureItem}>
-                  <Shield className={styles.featureIcon} />
-                  <span>Scalable solutions</span>
-                </li>
-              </ul>
+            <div className={styles.heroLogoWrapper}>
+              <div className={styles.heroLogoGlow} />
+              <img
+                src="/src/assets/scroll/Logo_Sign.png"
+                alt="Entolic Systems mark"
+                className={styles.heroLogoImage}
+              />
             </div>
           </div>
         </div>

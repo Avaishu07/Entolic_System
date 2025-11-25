@@ -8,6 +8,10 @@ import CaseStudiesPage from '../features/caseStudies/CaseStudiesPage';
 import BlogPage from '../features/blog/BlogPage';
 import CareersPage from '../features/careers/CareersPage';
 import ContactPage from '../features/contact/ContactPage';
+import AdminPanel from '../features/admin/AdminPanel';
+import PrivacyPolicyPage from '../features/legal/PrivacyPolicyPage';
+import TermsPage from '../features/legal/TermsPage';
+import CookiePolicyPage from '../features/legal/CookiePolicyPage';
 
 function AppRoutes() {
   return (
@@ -52,6 +56,22 @@ function AppRoutes() {
           <ContactPage />
         </MainLayout>
       } />
+      <Route path="/privacy-policy" element={
+        <MainLayout>
+          <PrivacyPolicyPage />
+        </MainLayout>
+      } />
+      <Route path="/terms" element={
+        <MainLayout>
+          <TermsPage />
+        </MainLayout>
+      } />
+      <Route path="/cookie-policy" element={
+        <MainLayout>
+          <CookiePolicyPage />
+        </MainLayout>
+      } />
+      <Route path="/admin" element={<AdminPanel />} />
     </Routes>
   );
 }

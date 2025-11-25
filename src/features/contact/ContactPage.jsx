@@ -175,7 +175,7 @@ function ContactPage() {
                       <option value="other">Other</option>
                     </select>
                   </div>
-                  <div className={styles.formField}>
+                  {/* <div className={styles.formField}>
                     <label htmlFor="budget">Indicative budget</label>
                     <select id="budget" name="budget" defaultValue="">
                       <option value="" disabled>
@@ -186,7 +186,7 @@ function ContactPage() {
                       <option value="50-100">USD 50k – 100k</option>
                       <option value="100+">USD 100k+</option>
                     </select>
-                  </div>
+                  </div> */}
                 </div>
 
                 <div className={styles.formField}>
@@ -237,8 +237,8 @@ function ContactPage() {
                   </div>
                   <div className={styles.infoText}>
                     <span className={styles.infoLabel}>Email</span>
-                    <a href="mailto:hello@entolic.systems" className={styles.infoValue}>
-                      hello@entolic.systems
+                    <a href="mailto:info@entolicsystems.com" className={styles.infoValue}>
+                      info@entolicsystems.com
                     </a>
                   </div>
                 </div>
@@ -249,8 +249,8 @@ function ContactPage() {
                   </div>
                   <div className={styles.infoText}>
                     <span className={styles.infoLabel}>Phone / WhatsApp</span>
-                    <a href="tel:+919765171957" className={styles.infoValue}>
-                      +91 9765171957
+                    <a href="tel:+919371865959" className={styles.infoValue}>
+                      +91 9371865959
                     </a>
                   </div>
                 </div>
@@ -261,15 +261,19 @@ function ContactPage() {
                   </div>
                   <div className={styles.infoText}>
                     <span className={styles.infoLabel}>Office</span>
-                    <address className={styles.infoValue} style={{fontStyle: 'normal'}}>
-                      Office No. 313, City Center Building,
-                      <br />
-                      Rajiv Gandhi Infotech Park,
-                      <br />
-                      Hinjewadi Phase 1, Pune, MH,
-                      <br />
-                      India - 411057
-                    </address>
+                    <a
+                      href="https://www.google.com/maps/place/Office+No.+313,+City+Center+Building,+Rajiv+Gandhi+Infotech+Park,+Hinjewadi+Phase+1,+Pune,+MH,+India+-+411057"
+                      target="_blank"
+                      rel="noreferrer"
+                      className={styles.infoValue}
+                      style={{ textDecoration: 'none' }}
+                    >
+                      <address style={{ fontStyle: 'normal' }}>
+                        Office No. 313, City Center Building, Rajiv Gandhi Infotech Park,
+                        <br />
+                        Hinjewadi Phase 1, Pune, MH, India - 411057
+                      </address>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -363,21 +367,6 @@ function ContactPage() {
           </div>
         </div>
       </section>
-
-      {/* Floating Quick Contact Button */}
-      <button
-        type="button"
-        className={styles.quickContactFab}
-        onClick={() => {
-          const el = document.getElementById('contact');
-          if (el) el.scrollIntoView({ behavior: 'smooth' });
-        }}
-      >
-        <span className={styles.quickContactIconWrapper}>
-          <MessageCircle className={styles.quickContactIcon} />
-        </span>
-        <span className={styles.quickContactText}>Quick contact</span>
-      </button>
     </main>
   );
 }

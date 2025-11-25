@@ -9,11 +9,21 @@ function HomePage() {
   return (
     <>
       <Hero />
-      <ServicesSnapshot />
-      <WhyUs />
-      <TechStrip />
-      <CaseStudiesPreview />
-      <FinalCTA />
+      <div className="section-compact section-animated">
+        <ServicesSnapshot />
+      </div>
+      <div className="section-compact section-animated">
+        <WhyUs />
+      </div>
+      <div className="section-compact section-animated">
+        <TechStrip />
+      </div>
+      <div className="section-compact section-animated">
+        <CaseStudiesPreview />
+      </div>
+      <div className="section-compact section-animated">
+        <FinalCTA />
+      </div>
     </>
   );
 }

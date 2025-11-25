@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styles from './FinalCTA.module.css';
 
 function FinalCTA() {
@@ -12,9 +13,9 @@ function FinalCTA() {
           <p className={styles.description}>
             Transform your vision into a production-ready digital product. Our team is ready to help you innovate and scale.
           </p>
-          <button className={styles.btn}>
+          <Link to="/contact" className={styles.btn}>
             Schedule a Call
-          </button>
+          </Link>
         </div>
       </div>
     </section>

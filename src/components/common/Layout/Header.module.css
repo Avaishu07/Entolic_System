@@ -55,9 +55,21 @@
 }
 
 .logoImage {
-  height: 42px;
+  height: 40px;
   width: auto;
   transition: all var(--transition-base);
+}
+
+@media (min-width: 768px) {
+  .logoImage {
+    height: 48px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .logoImage {
+    height: 56px;
+  }
 }
 
 .logoWrapper:hover .logoImage {
@@ -66,8 +78,8 @@
 }
 
 @media (min-width: 1024px) {
-  .logoImage {
-    height: 48px;
+  .container {
+    padding: 0 var(--space-2xl);
   }
 }
 

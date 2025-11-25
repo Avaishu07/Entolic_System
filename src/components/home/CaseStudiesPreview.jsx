@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styles from './CaseStudiesPreview.module.css';
 import { ArrowRight } from 'lucide-react';
 
@@ -70,10 +71,10 @@ function CaseStudiesPreview() {
         </div>
 
         <div className={styles.ctaWrapper}>
-          <button className={styles.viewAllBtn}>
+          <Link to="/case-studies" className={styles.viewAllBtn}>
             View all case studies
             <ArrowRight className={styles.btnIcon} />
-          </button>
+          </Link>
         </div>
       </div>
     </section>

@@ -1,5 +1,6 @@
 import Header from './Header';
 import Footer from './Footer';
+import Chatbot from '../Chatbot';
 
 function MainLayout({ children }) {
   return (
@@ -9,6 +10,7 @@ function MainLayout({ children }) {
         {children}
       </main>
       <Footer />
+      <Chatbot />
     </div>
   );
 }

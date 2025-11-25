@@ -7,7 +7,7 @@ function Header() {
       <div className={styles.container}>
         <Link to="/" className={styles.logoWrapper}>
           <img
-            src="/logo.png"
+            src="/src/assets/scroll/Full_Logo__1_-removebg-preview.png "
             alt="Entolic Systems - Infinite Innovation"
             className={styles.logoImage}
           />
@@ -98,9 +98,9 @@ function Header() {
               </li>
             </ul>
           </nav>
-          <Link to="/contact" className={styles.headerCta}>
+          {/* <Link to="/contact" className={styles.headerCta}>
             Contact Us
-          </Link>
+          </Link> */}
         </div>
 
         <button className={styles.mobileMenuBtn}>
