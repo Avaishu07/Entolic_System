@@ -55,14 +55,14 @@
 }
 
 .logoImage {
-  height: 40px;
+  height: 60px;
   width: auto;
   transition: all var(--transition-base);
 }
 
 @media (min-width: 768px) {
   .logoImage {
-    height: 48px;
+    height: 60px;
   }
 }
 
